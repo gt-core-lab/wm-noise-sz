@@ -1,0 +1,30 @@
+model{  for (i in 1:nsubjs){
+     for (m in 1:nnoise){
+	for (n in 1:ntrials){          resp1[i,m,n] ~ dbern(theta1[i,m,n])   
+          theta1[i,m,n] <- ((1-(1-0.5)*exp(-(kt1[i]*x1[i,m,n]/log(th1[i,m]*1000))^slope[i])))
+          resp2[i,m,n] ~ dbern(theta2[i,m,n])   
+          theta2[i,m,n] <- (1-(1-0.5)*exp(-(kt2[i]*x2[i,m,n]/log(th2[i,m]*1000))^slope[i]))
+        }
+        th1[i,m] <- (1/1)*(((1+0.6^2)*(Af[i]*Ne[m])^(2*2.64)+Na[i]^2)/((1/d[1])^2-0.6^2))^(1/(2*2.64))
+        th2[i,m] <- (1/1)*(((1+0.6^2)*(Af[i]*Ne[m])^(2*2.64)+Na[i]^2)/((1/d[2])^2-0.6^2))^(1/(2*2.64))
+     }
+     kt1[i] <- (-log((1-pthreshold[1])/(1-0.5)))^(1/slope[i])
+     kt2[i] <- (-log((1-pthreshold[2])/(1-0.5)))^(1/slope[i])
+
+     Na[i] ~ dnorm(muNa,lambdaNa)T(0,)
+     Af[i] ~ dnorm(muAf,lambdaAf)T(0,)
+     slope[i] ~ dnorm(muslope,lambdaslope)T(0,)
+  }
+
+  muNa ~ dunif(0,0.9)
+  muAf ~ dunif(0,3)
+  muslope ~ dunif(0,25)
+
+  sigmaNa ~ dunif(0,100)
+  sigmaAf ~ dunif(0,100)
+  sigmaslope ~ dunif(0,100)
+
+  lambdaNa <- 1/pow(sigmaNa,2)
+  lambdaAf <- 1/pow(sigmaAf,2)
+  lambdaslope <- 1/pow(sigmaslope,2)
+}

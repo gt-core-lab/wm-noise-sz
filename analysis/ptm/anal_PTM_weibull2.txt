@@ -1,0 +1,7 @@
+model{  for (i in 1:nsubjs){    for (j in 1:nc){
+	for (k in 1:ntrials){      	   r[i,k,j] ~ dbern(theta[i,k,j])   
+           theta[i,k,j] <- (1-(1-0.5)*2^(-(x[i,k,j]/p2[i,j])^p3[i,j]))   
+        }
+        p2[i,j] ~ dunif(0,3)
+        p3[i,j] ~ dunif(1,15)
+    }  }}
