@@ -1,5 +1,5 @@
 
-Codes for "The precision of visual working memory is determined by sensory neural noise"
+Repository for "The precision of visual working memory is determined by sensory neural noise"
 
 Required:
 - Psychtoolbox
