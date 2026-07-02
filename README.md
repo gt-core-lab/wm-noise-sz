@@ -5,18 +5,16 @@ Code accompanying the manuscript:
 
 > **Sensory Neural Noise as a Limiting Factor in Visual Working Memory Precision in Neurotypicals and Individuals with Schizophrenia**
 
-This repository contains the experimental tasks, computational modeling, and analysis code used in the study examining how sensory neural noise constrains visual working memory precision in neurotypical adults and individuals with schizophrenia. :contentReference[oaicite:0]{index=0}
+This repository contains the experimental tasks, computational modeling, and analysis code used in the study examining how sensory neural noise constrains visual working memory precision in neurotypical adults and individuals with schizophrenia.
 
 ## Authors
 
-- Woon Ju Park*
+- Woon Ju Park
 - Megan Ichinose
 - Gengshi Hu
 - Geoffrey F. Woodman
-- Duje Tadin#
-- Sohee Park#*
-
-\* Corresponding authors
+- Duje Tadin
+- Sohee Park
 
 ## Preprint
 
