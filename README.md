@@ -36,7 +36,7 @@ The repository includes code for
 
 The code was developed in MATLAB and requires:
 
-- MATLAB (tested on recent releases)
+- MATLAB 
 - Psychtoolbox
 - FAST Toolbox
   - Bergsma, J., MacLeod, D., & Vul, E. (2010). *Functional Adaptive Sequential Testing*. *Seeing and Perceiving, 23*(5), 483–515.
