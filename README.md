@@ -43,7 +43,4 @@ The code was developed in MATLAB and requires:
 - JAGS (Just Another Gibbs Sampler)
 - `matjags.m` MATLAB interface for JAGS
 
-**Zenodo DOI**
-
-https://doi.org/10.5281/zenodo.21140286
 
